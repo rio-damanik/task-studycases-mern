@@ -110,7 +110,6 @@
 .order-type-button,
 .payment-button {
   flex: 1;
-  padding: 15px 20px;
   border: 2px solid #e9ecef;
   border-radius: 12px;
   background: white;
