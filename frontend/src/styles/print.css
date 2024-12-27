@@ -1,0 +1,45 @@
+/* Global print styles */
+@media print {
+  /* First hide everything */
+  body > *:not(.invoice-container) {
+    display: none !important;
+  }
+
+  /* Then show only invoice content */
+  .invoice-container {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .invoice-content {
+    display: block !important;
+  }
+
+  /* Hide specific elements */
+  nav,
+  header,
+  footer,
+  .navbar,
+  .sidebar,
+  .footer,
+  .screen-only,
+  .invoice-actions,
+  .back-button {
+    display: none !important;
+  }
+
+  /* Reset body styles */
+  body {
+    margin: 0;
+    padding: 0;
+    background: white !important;
+  }
+
+  /* Ensure text is visible */
+  .invoice-container * {
+    color: black !important;
+  }
+}

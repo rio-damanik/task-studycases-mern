@@ -1,0 +1,200 @@
+.edit-profile-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-profile-container h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header-icon {
+  font-size: 1.5rem;
+  color: #3498db;
+}
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-icon {
+  color: #3498db;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+  background-color: #ffffff;
+}
+
+.form-group input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.password-section {
+  border-top: 2px solid #eee;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+.password-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-icon {
+  color: #3498db;
+}
+
+.password-note {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.password-note::before {
+  content: "ℹ️";
+  position: absolute;
+  left: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+.cancel-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.error-message,
+.success-message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message {
+  background-color: #fde8e8;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.success-message {
+  background-color: #e6fffa;
+  color: #046c4e;
+  border: 1px solid #9ae6b4;
+}
+
+.message-icon {
+  font-size: 1.2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.2rem;
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .edit-profile-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-group input {
+    font-size: 16px; /* Prevent zoom on mobile */
+  }
+}

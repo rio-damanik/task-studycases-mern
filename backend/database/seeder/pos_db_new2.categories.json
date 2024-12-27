@@ -1,0 +1,18 @@
+[{
+  "_id": "656c0eb807d3e9dbe63afa89",
+  "name": "Makanan",
+  "tags": [
+    "656c0eb807d3e9dbe63afa90",
+    "656c0eb807d3e9dbe63afa91",
+    "656c0eb807d3e9dbe63afa94",
+    "656c0eb807d3e9dbe63afa95"
+  ]
+},
+{
+  "_id": "656c0eb807d3e9dbe63afa92",
+  "name": "Minuman",
+  "tags": [
+    "656c0eb807d3e9dbe63afa91",
+    "656c0eb807d3e9dbe63afa93"
+  ]
+}]
