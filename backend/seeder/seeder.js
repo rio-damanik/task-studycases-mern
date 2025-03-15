@@ -101,7 +101,7 @@ const products = [
     name: "Gado-gado",
     description: "Sayuran segar dengan bumbu kacang dan kerupuk",
     price: 25000,
-    image_url: "https://images.unsplash.com/photo-1512058533999-59d3c490ddb3?w=500",
+    image_url: "https://i.pinimg.com/474x/66/04/e1/6604e13155cf3c3c0aa42deaba649683.jpg?w=500",
     category: "656c0eb807d3e9dbe63afa89",
     tags: ["656c0eb807d3e9dbe63afa94", "656c0eb807d3e9dbe63afa95"]
   },
@@ -149,7 +149,7 @@ const products = [
     name: "Capcay Seafood",
     description: "Tumis sayuran campur dengan seafood segar",
     price: 40000,
-    image_url: "https://images.unsplash.com/photo-1512058533999-a3d718f1768f?w=500",
+    image_url: "https://i.pinimg.com/474x/7e/e2/c4/7ee2c4ddf603d83b3235ebcc6c4b534a.jpg?w=500",
     category: "656c0eb807d3e9dbe63afa89",
     tags: ["656c0eb807d3e9dbe63afa94"]
   },
@@ -197,7 +197,7 @@ const products = [
     name: "Nasi Uduk Komplit",
     description: "Nasi uduk dengan ayam goreng, tempe, dan sambal",
     price: 28000,
-    image_url: "https://images.unsplash.com/photo-1512058533999-a3d718f1768f?w=500",
+    image_url: "https://i.pinimg.com/236x/e5/9e/a0/e59ea0e8add4667b18f740922ae3930a.jpg?w=500",
     category: "656c0eb807d3e9dbe63afa89",
     tags: ["656c0eb807d3e9dbe63afa95"]
   },
