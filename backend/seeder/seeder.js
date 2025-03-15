@@ -3,7 +3,8 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
-const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/pos_db_new2';
+// MongoDB connection string
+const uri = process.env.MONGODB_URL || process.env.MONGODB_URI || 'mongodb://localhost:27017/pos_db_new2';
 const client = new MongoClient(uri);
 
 // Tags data
@@ -253,18 +254,66 @@ const validateProduct = (product) => {
   return product;
 };
 
+// Menu data (for navigation)
+const menus = [
+  {
+    name: "Home",
+    icon: "home",
+    path: "/",
+    role: ["admin", "user"]
+  },
+  {
+    name: "Products",
+    icon: "shopping-bag",
+    path: "/products",
+    role: ["admin", "user"]
+  },
+  {
+    name: "Categories",
+    icon: "tag",
+    path: "/categories",
+    role: ["admin"]
+  },
+  {
+    name: "Tags",
+    icon: "tags",
+    path: "/tags",
+    role: ["admin"]
+  },
+  {
+    name: "Cart",
+    icon: "shopping-cart",
+    path: "/cart",
+    role: ["user"]
+  },
+  {
+    name: "Orders",
+    icon: "list",
+    path: "/orders",
+    role: ["admin", "user"]
+  },
+  {
+    name: "Users",
+    icon: "users",
+    path: "/users",
+    role: ["admin"]
+  }
+];
+
 async function seedDatabase() {
   try {
+    console.log(`Attempting to connect to MongoDB with URL: ${uri}`);
     await client.connect();
     console.log('Connected to MongoDB');
 
-    const database = client.db(process.env.MONGODB_DBNAME || 'pos_db_new2');
+    const database = client.db(process.env.DB_NAME || 'pos_db_new2');
 
     // Clear existing data
     await database.collection('tags').deleteMany({});
     await database.collection('categories').deleteMany({});
     await database.collection('users').deleteMany({});
     await database.collection('products').deleteMany({});
+    await database.collection('menus').deleteMany({});
     console.log('Existing data cleared');
 
     // Insert tags
@@ -283,6 +332,10 @@ async function seedDatabase() {
     const validatedProducts = products.map(validateProduct);
     const productsResult = await database.collection('products').insertMany(validatedProducts);
     console.log(`${productsResult.insertedCount} products inserted`);
+
+    // Insert menus
+    const menusResult = await database.collection('menus').insertMany(menus);
+    console.log(`${menusResult.insertedCount} menus inserted`);
 
     console.log('Database seeding completed successfully');
 
