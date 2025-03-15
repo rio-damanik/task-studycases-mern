@@ -415,12 +415,14 @@ const ProductManagement = () => {
                       {isValidUrl(imagePreview) ?
                         <img
                           src={imagePreview || '/placeholder.png'}
+                          alt="Product preview"
                           onError={(e) => {
                             e.target.onerror = null;
                             e.target.src = '/placeholder.png';
                           }}
                         /> : <img
                           src={'http://localhost:8000/uploads/' + imagePreview}
+                          alt="Product preview"
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.src = '/placeholder.png';

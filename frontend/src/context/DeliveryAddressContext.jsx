@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import axios from 'axios';
-import { useAuth } from './AuthContext';
 
 const DeliveryAddressContext = createContext();
 
